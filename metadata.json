@@ -1,0 +1,6 @@
+{
+  "name": "RHVault - Precision Humidity Control & Protection",
+  "description": "Zhuhai Deomax Precision Electrical Co., Ltd. (珠海市迪迈斯精密电器有限公司) official portal www.deomax.com. Precision dual-mode smart humidity control cabinets & dry vaults. Tel: +86-756-6903313, Mobile: 1330299643.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

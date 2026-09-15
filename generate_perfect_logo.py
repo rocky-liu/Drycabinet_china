@@ -1,0 +1,60 @@
+svg_template = '''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 248" width="100%" height="100%" fill="none">
+  <defs>
+    <!-- Vibrant Electric Blue to Royal Blue Gradient -->
+    <linearGradient id="deomax-blue" x1="0%" y1="0%" x2="60%" y2="100%">
+      <stop offset="0%" stop-color="#00B8FF" />
+      <stop offset="40%" stop-color="#0077FF" />
+      <stop offset="100%" stop-color="#0048E6" />
+    </linearGradient>
+  </defs>
+
+  <g id="deomax-logo-v5">
+    <!-- ==================== D ==================== -->
+    <!-- Tech stencil D with single continuous transparent cutout path -->
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M 40 35 L 94 35 A 60 60 0 0 1 154 95 A 60 60 0 0 1 94 155 L 40 155 L 40 82 L 64 82 L 64 131 L 94 131 A 36 36 0 0 0 130 95 A 36 36 0 0 0 94 59 L 40 59 L 40 35 Z" fill="#050811" />
+
+    <!-- ==================== E ==================== -->
+    <!-- 3 Stacking Horizontal Bars with Silver-Grey Center -->
+    <rect x="180" y="35" width="110" height="24" rx="2" fill="#050811" />
+    <rect x="180" y="83" width="110" height="24" rx="2" fill="#8E8E93" />
+    <rect x="180" y="131" width="110" height="24" rx="2" fill="#050811" />
+
+    <!-- ==================== O ==================== -->
+    <!-- Squircle O with transparent inner counter -->
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M 352 35 L 402 35 A 34 34 0 0 1 436 69 L 436 121 A 34 34 0 0 1 402 155 L 352 155 A 34 34 0 0 1 318 121 L 318 69 A 34 34 0 0 1 352 35 Z M 356 59 A 14 14 0 0 0 342 73 L 342 117 A 14 14 0 0 0 356 131 L 398 131 A 14 14 0 0 0 412 117 L 412 73 A 14 14 0 0 0 398 59 Z" fill="#050811" />
+
+    <!-- ==================== M ==================== -->
+    <!-- Geometric Blue M -->
+    <path d="M 462 155 L 462 35 L 488 35 L 524 116 L 560 35 L 586 35 L 586 155 L 562 155 L 562 76 L 536 132 L 512 132 L 486 76 L 486 155 Z" fill="url(#deomax-blue)" />
+
+    <!-- ==================== A ==================== -->
+    <!-- Chevron Legs with Center Dot (No Crossbar) -->
+    <path d="M 612 155 L 660 35 L 684 35 L 732 155 L 706 155 L 672 68 L 638 155 Z" fill="url(#deomax-blue)" />
+    <!-- Solid Dot in Center of A -->
+    <circle cx="672" cy="110" r="13" fill="url(#deomax-blue)" />
+
+    <!-- ==================== X ==================== -->
+    <!-- Crossing Diagonals in Blue -->
+    <path d="M 756 35 L 784 35 L 818 87 L 852 35 L 880 35 L 832 99 L 880 155 L 852 155 L 818 107 L 784 155 L 756 155 L 804 95 Z" fill="url(#deomax-blue)" />
+
+    <!-- ==================== SLOGAN ==================== -->
+    <text x="460" y="218" 
+          text-anchor="middle" 
+          font-family="system-ui, -apple-system, 'Plus Jakarta Sans', sans-serif" 
+          font-weight="800" 
+          font-size="21" 
+          letter-spacing="0.46em">
+      <tspan fill="#050811">CONNECT. </tspan>
+      <tspan fill="url(#deomax-blue)">BRILLIANT. </tspan>
+      <tspan fill="#050811">SMART.</tspan>
+    </text>
+  </g>
+</svg>'''
+
+with open('public/deomax-logo.svg', 'w') as f:
+    f.write(svg_template)
+
+with open('dist/deomax-logo.svg', 'w') as f:
+    f.write(svg_template)
+
+print("Created public/deomax-logo.svg and dist/deomax-logo.svg successfully!")

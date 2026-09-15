@@ -1,0 +1,20 @@
+珠海市迪迈斯精密电器有限公司 (Zhuhai Deomax Precision Electrical Co., Ltd.)
+官网静态网站 - 宝塔面板快速部署指引
+
+【极简 3 步部署方法】：
+1. 登录您的宝塔 Linux 面板（BT Panel）。
+2. 点击左侧菜单「网站」->「添加站点」：
+   - 域名：填写您的正式域名（例如 www.deomax.com 和 deomax.com）
+   - 根目录：使用宝塔默认路径（例如 /www/wwwroot/www.deomax.com）
+   - PHP版本：纯静态（Pure Static）即可，无需 PHP 或 MySQL。
+3. 进入该站点的「根目录」，删除宝塔默认生成的 404.html 和 index.html，将本 zip 压缩包内的所有文件（index.html、assets、products、deomax-logo.svg、deomax-reception.jpg 等）上传并解压到该目录下。
+4. 访问您的域名即可立即上线！
+
+【如需配置伪静态与 SPA 路由（推荐）】：
+在宝塔站点设置 ->「伪静态」中，添加以下 Nginx 规则（防止刷新页面时出现 404）：
+location / {
+    try_files $uri $uri/ /index.html;
+}
+
+【开启 SSL HTTPS 安全证书】：
+在宝塔站点设置 ->「SSL」->「Let's Encrypt」，勾选域名申请免费证书并开启「强制 HTTPS」。
